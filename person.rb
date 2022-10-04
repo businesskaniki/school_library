@@ -1,4 +1,7 @@
 class Person
+  attr_writer :id
+  attr_accessor :name, :age
+
   def initialize(age, name = 'Unknown', parent_permission: true)
     @id = Random.rand(1..1000)
     @name = name
@@ -16,27 +19,5 @@ class Person
 
   def can_use_services?
     of_age? || @parent_permission
-  end
-end
-
-class Student < Person
-  def initialize(age, classroom, name = 'Unknown', parent_permission: true)
-    super(age, name, parent_permission)
-    @classroom = classroom
-  end
-
-  def play_hooky
-    "¯\(ツ)/¯"
-  end
-end
-
-class Teacher < Person
-  def initialize(age, specialization, name = 'Unknown', parent_permission: true)
-    super(age, name, parent_permission)
-    @specialization = specialization
-  end
-
-  def can_use_services?
-    true
   end
 end
