@@ -1,7 +1,6 @@
 require_relative './classroom'
 
 class Student < Person
-  
   attr_reader :classroom
 
   def initialize(classroom)
@@ -17,5 +16,4 @@ class Student < Person
     @classroom = classroom
     classroom.students << self unless classroom.students.include?(self)
   end
-
 end

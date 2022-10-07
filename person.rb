@@ -6,7 +6,6 @@ require_relative './book'
 require_relative './rental'
 
 class Person < Nameable
-  attr_reader :id
   attr_reader :rentals, :id
   attr_accessor :name, :age
 
@@ -34,7 +33,6 @@ class Person < Nameable
   def correct_name
     @name
   end
-
 
   def add_rentals(rental)
     @rentals << rental
