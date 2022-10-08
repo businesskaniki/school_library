@@ -1,9 +1,9 @@
 require_relative './basedecorator'
 require_relative './capitalizedecorator'
-require_relative './trimdecorator'
-require_relative './class'
+require_relative './trimmerdecorator'
+require_relative './classroom'
 require_relative './book'
-require_relative './rent'
+require_relative './rental'
 
 class Person < Nameable
   attr_reader :rentals, :id
